@@ -13,6 +13,8 @@
 - **Processing Queue (处理队列)**: 基于 Dart Isolate 实现的后台队列，负责在不阻塞主 UI 的情况下，对缩略图执行 K-Means 主色调提取和 EXIF 解析。
 - **Portable Distribution (便携版分发)**: Windows 端的部署形式。不写注册表，无安装向导，解压即用。
 - **Silent Updater (静默更新器)**: 独立于主进程的小型脚本/程序（如 `updater.exe`）。负责在后台全量下载完成后，终止主进程、替换便携版文件并重启应用，实现无感知的热更新体验。
+- **Isar Database**: Arc 的核心本地数据库引擎。支持强类型 Dart 对象和原生多对多关系（`IsarLinks`），负责存储 Nodes、Photos 及其关联。
+- **Index Optimization (索引优化)**: 针对时间（`date`, `takenAt`）和文件特征（`hash`）的数据库级优化，确保在进行 Chunk 视口查询和照片去重时具备极高的高性能。
 - **Track / Connection (轨道/连接)**: Node 之间的连线。分为默认的“时间顺序自动串联轨道”（人生主轨道）和手动添加的“主题连接”（如通过颜色或虚线区分的逻辑关联）。
 - **Node Type (节点类型)**: 节点的分类（如日常、旅行、里程碑、计划），它决定了节点在 3D 星图中的平台外观和光晕颜色。
 - **Unknown Starfield (未知星域)**: 针对缺失 GPS 数据的节点设置的默认存放区域，用户可在此区域或 2D 地图上进行手动定位。
