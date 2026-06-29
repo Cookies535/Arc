@@ -1,2 +1,2 @@
-# orbit
-memory orbit — a local photo &amp; life-node journal
+# Arc
+memory Arc — a local photo &amp; life-node journal
